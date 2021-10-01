@@ -5,7 +5,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:spotify_app/constants.dart';
+import 'package:spotify_app/screens/playlist_screen.dart';
 import 'package:spotify_app/widgets/widgets.dart';
+
+import 'data/data.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,13 +30,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Spotify',
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(
+      theme: ThemeData(
         brightness: Brightness.dark,
-        // appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
-        // scaffoldBackgroundColor: const Color(0xFF121212),
-        // backgroundColor: const Color(0xFF121212),
-        // primaryColor: Colors.black,
-        // accentColor: const Color(0xFF1DB954),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
+        scaffoldBackgroundColor: const Color(0xFF121212),
+        backgroundColor: const Color(0xFF121212),
+        primaryColor: Colors.black,
+        accentColor: const Color(0xFF1DB954),
         iconTheme: const IconThemeData().copyWith(color: Colors.white),
         fontFamily: 'Montserrat',
       ),
@@ -53,14 +57,18 @@ class Shell extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 SideMenu(),
-                // Playlist Screen
+                const Expanded(
+                  child: PlaylistScreen(
+                    playList: lofihiphopPlaylist,
+                  ),
+                ),
               ],
             ),
           ),
           Container(
             height: 84.0,
             width: double.infinity,
-            color: Colors.blue,
+            color: primaryColor,
           ),
         ],
       ),

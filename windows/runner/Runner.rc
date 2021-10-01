@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "A new Flutter project." "\0"
+            VALUE "FileDescription", "Spotify Desktop App" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "spotify_app" "\0"
+            VALUE "InternalName", "spotify_desktop_app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2021 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "spotify_app.exe" "\0"
-            VALUE "ProductName", "spotify_app" "\0"
+            VALUE "OriginalFilename", "spotify_desktop_app.exe" "\0"
+            VALUE "ProductName", "spotify_desktop_app" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

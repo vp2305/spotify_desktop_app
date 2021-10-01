@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(spotify_app LANGUAGES CXX)
+project(spotify_desktop_app LANGUAGES CXX)
 
-set(BINARY_NAME "spotify_app")
+set(BINARY_NAME "spotify_desktop_app")
 
 cmake_policy(SET CMP0063 NEW)
 
